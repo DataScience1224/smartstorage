@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>SmartStorage - User Registration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #d1ccd0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        flex-direction: column;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .header img {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+        color: #333;
+      }
+
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 15px;
+      }
+
+      .submit-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .toggle-btn {
+        text-align: center;
+        color: #007bff;
+        cursor: pointer;
+        margin-bottom: 15px;
+      }
+
+      .toggle-btn:hover {
+        text-decoration: underline;
+      }
+
+      #loginSection {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div style="display: flex; align-items: center">
+          <img src="logo.png" alt="SmartStorage Logo" />
+          <h1 id="logoText" aria-label="Smart Storage System">
+            SmartStorage System
+          </h1>
+        </div>
+      </div>
+
+      <!-- Theme Toggle and Font Size Buttons -->
+      <div style="display: flex; gap: 20px">
+        <button id="themeToggle" class="toggle-btn">Change Theme</button>
+        <button id="increaseFont" class="toggle-btn">+</button>
+        <button id="decreaseFont" class="toggle-btn">-</button>
+      </div>
+    </div>
+
+    <div class="container" id="registrationSection">
+      <h2>User Registration</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name" id="nameLabel">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email" id="emailLabel">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password" id="passwordLabel">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+      <div class="toggle-btn" onclick="toggleSection()">
+        Already have an account? Login
+      </div>
+    </div>
+
+    <!-- Login Section -->
+    <div class="container" id="loginSection">
+      <h2>User Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginEmail">Email:</label>
+          <input type="email" id="loginEmail" required />
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password:</label>
+          <input type="password" id="loginPassword" required />
+        </div>
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+      <div class="toggle-btn" onclick="toggleSection()">
+        Don't have an account? Register
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

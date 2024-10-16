@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d1ccd0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #333;
+  /* Static color for the logo text */
+}
+
+/* Static colors for the form labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  /* Static color for form labels */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.toggle-btn {
+  text-align: center;
+  color: #007bff;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+/* General styling for buttons */
+button.submit-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for table and buttons */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.remove-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: darkred;
+}
+
+
+.toggle-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+#accessibilityBtn {
+  background-color: #4CAF50;
+  /* Green button */
+}
+
+#accessibilityBtn:hover {
+  background-color: #45a049;
+}

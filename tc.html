@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RFID Tagging and Tracking Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .container {
+        width: 500px;
+        margin: 0 auto;
+      }
+      input,
+      button {
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>RFID Tagging and Tracking Demo</h1>
+
+      <!-- Tagging an Item Section -->
+      <h2>Tag an Item</h2>
+      <label for="rfidTag">RFID Tag ID:</label>
+      <input
+        type="text"
+        id="rfidTag"
+        placeholder="Enter RFID Tag ID"
+        required
+      />
+
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" placeholder="Enter Item Name" required />
+
+      <label for="itemLocation">Location:</label>
+      <input
+        type="text"
+        id="itemLocation"
+        placeholder="Enter Item Location"
+        required
+      />
+
+      <button id="tagItemBtn">Tag Item</button>
+
+      <!-- Tracking an Item Section -->
+      <h2>Track an Item</h2>
+      <label for="rfidTrackTag">RFID Tag ID:</label>
+      <input
+        type="text"
+        id="rfidTrackTag"
+        placeholder="Enter RFID Tag ID"
+        required
+      />
+      <button id="trackItemBtn">Track Item</button>
+
+      <!-- Display Results -->
+      <div id="trackResult" style="display: none">
+        <h3>Item Details:</h3>
+        <p><strong>Item Name:</strong> <span id="trackedItemName"></span></p>
+        <p><strong>Location:</strong> <span id="trackedItemLocation"></span></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
